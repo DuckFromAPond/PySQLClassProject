@@ -1516,6 +1516,7 @@ def delete(entry_1):
     try:
         # STEP 2 - CONNECT WITH MYSQL DATABASE
         conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
+
     except Exception as ex:
         print('PROBLEM WITH Database Connection', ex)
     else:
@@ -2031,29 +2032,30 @@ create table users
 create table hall1
 (
 	SeatID int primary key,
-    	ID int,
-    	voucher boolean
+    ID int,
+    voucher boolean
 );
 
-create table hall2
+
+create table hall2  
 (
 	SeatID int primary key,
-    	ID int,
-    	voucher boolean
+    ID int,
+    voucher boolean
 );
 
 create table hall3
 (
 	SeatID int primary key,
-    	ID int,
-    	voucher boolean
+    ID int,
+    voucher boolean
 );
 
 create table hall4
 (
 	SeatID int primary key,
-    	ID int,
-    	voucher boolean
+    ID int,
+    voucher boolean
 );
 
 !!!!! DON'T FORGET TO ADD YOUR OWN PASS TO THE CONNECTION !!!!
