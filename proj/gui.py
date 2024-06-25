@@ -51,7 +51,7 @@ def updatetaken():
     conn = None
     try:
         # STEP 2 - CONNECT WITH MYSQL DATABASE
-        conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
+        conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
 
     except Exception as ex:
         print('PROBLEM WITH Database Connection', ex)
@@ -89,7 +89,7 @@ def button_click_reg(entry_1, entry_2, entry_3):
     conn = None
     try:
         # STEP 2 - CONNECT WITH MYSQL DATABASE
-        conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
+        conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
 
     except Exception as ex:
         print('PROBLEM WITH Database Connection', ex)
@@ -140,7 +140,7 @@ def button_click_book(entry_1, canvas, txttl, txtst):
     global selected
     try:
         # STEP 2 - CONNECT WITH MYSQL DATABASE
-        conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
+        conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
 
     except Exception as ex:
         print('PROBLEM WITH Database Connection', ex)
@@ -196,7 +196,7 @@ def button_click_cancel(canvas, txtst):
     conn = None
     try:
         # STEP 2 - CONNECT WITH MYSQL DATABASE
-        conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
+        conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
 
     except Exception as ex:
         print('PROBLEM WITH Database Connection', ex)
@@ -411,7 +411,7 @@ def login():
         global email
         try:
             # STEP 2 - CONNECT WITH MYSQL DATABASE
-            conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
+            conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
 
         except Exception as ex:
             print('PROBLEM WITH Database Connection', ex)
@@ -1515,8 +1515,7 @@ def delete(entry_1):
     conn = None
     try:
         # STEP 2 - CONNECT WITH MYSQL DATABASE
-        conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
-
+        conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
     except Exception as ex:
         print('PROBLEM WITH Database Connection', ex)
     else:
@@ -1558,7 +1557,7 @@ def delete(entry_1):
     conn = None
     try:
         # STEP 2 - CONNECT WITH MYSQL DATABASE
-        conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
+        conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
 
     except Exception as ex:
         print('PROBLEM WITH Database Connection', ex)
@@ -1597,7 +1596,7 @@ def delete_page():
         conn = None
         try:
             # STEP 2 - CONNECT WITH MYSQL DATABASE
-            conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
+            conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
 
         except Exception as ex:
             print('PROBLEM WITH Database Connection', ex)
@@ -1630,7 +1629,7 @@ def delete_page():
         conn = None
         try:
             # STEP 2 - CONNECT WITH MYSQL DATABASE
-            conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
+            conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
 
         except Exception as ex:
             print('PROBLEM WITH Database Connection', ex)
@@ -1752,7 +1751,7 @@ def delete_page():
         def show():
             for row in listBox.get_children():
                 listBox.delete(row)
-            conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
+            conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
             mycursor = conn.cursor()
             mycursor.execute("select ID,username,email from users")
             records = mycursor.fetchall()
@@ -1933,7 +1932,7 @@ def receipt():
     chairtxt = ""
     try:
         # STEP 2 - CONNECT WITH MYSQL DATABASE
-        conn = pymysql.connect(host='127.0.0.1', user='root', password='meng01322', db='pythonProject')
+        conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='pythonProject')
 
     except Exception as ex:
         print('PROBLEM WITH Database Connection', ex)
@@ -2032,8 +2031,29 @@ create table users
 create table hall1
 (
 	SeatID int primary key,
-    ID int,
-    voucher boolean
+    	ID int,
+    	voucher boolean
+);
+
+create table hall2
+(
+	SeatID int primary key,
+    	ID int,
+    	voucher boolean
+);
+
+create table hall3
+(
+	SeatID int primary key,
+    	ID int,
+    	voucher boolean
+);
+
+create table hall4
+(
+	SeatID int primary key,
+    	ID int,
+    	voucher boolean
 );
 
 !!!!! DON'T FORGET TO ADD YOUR OWN PASS TO THE CONNECTION !!!!
