@@ -10,7 +10,7 @@ create table users
 	ID int Primary key auto_increment,
 	email varchar(30),
 	username varchar(20) NOT NULL unique,
-	password varchar(20)
+	password varchar(20) NOT NULL
 );
 
 create table hall1
